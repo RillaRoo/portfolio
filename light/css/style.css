@@ -8,6 +8,22 @@ body {
   position: relative;
 }
 
+.text-center{
+  position: absolute;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+div.video {
+  display: block;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 body:before {
   content: "";
   position: absolute;

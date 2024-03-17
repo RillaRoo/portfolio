@@ -24,6 +24,13 @@ body:before {
   z-index: 8;
 }
 
+div.video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 body.offcanvas {
   overflow: hidden;
 }
@@ -187,7 +194,7 @@ a, a:hover {
 }
 
 .unslate_co--site-nav .unslate_co--site-logo span {
-  color: #D63447;
+  color: #2265a9;
 }
 
 .unslate_co--site-nav .site-nav-ul, .unslate_co--site-nav .site-nav-ul-none-onepage {
@@ -466,16 +473,16 @@ a, a:hover {
 }
 
 .unslate_co--site-nav.scrolled {
-  position: fixed;
+  /* position: fixed;
   right: 0;
   left: 0;
   top: 0;
-  margin-top: -130px;
-  background: #fff !important;
+  margin-top: -230px;
+  background: #ffffff !important;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 5px; */
 }
 
 .unslate_co--site-nav.scrolled .burger-toggle-menu {
@@ -511,7 +518,7 @@ a, a:hover {
 }
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a:hover, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a:hover {
-  color: #D63447;
+  color: #2265a9;
 }
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a:before, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a:before {
@@ -519,7 +526,7 @@ a, a:hover {
 }
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a.active, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a.active {
-  color: #D63447;
+  color: #2265a9;
 }
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a.active:before, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a.active:before {
@@ -1336,7 +1343,7 @@ figure.dotted-bg:before {
 .counter-v1 .counter-label {
   text-transform: uppercase;
   letter-spacing: .1rem;
-  font-size: 11px;
+  font-size: 20px;
   font-weight: 900;
 }
 
@@ -2053,7 +2060,7 @@ span.error {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #d63447;
+  background: #2265a9;
   margin-left: -100%;
   z-index: 2;
 }
@@ -2082,7 +2089,7 @@ span.error {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #d63447;
+  background: #2265a9;
   margin-left: -100%;
   z-index: 9;
 }

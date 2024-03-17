@@ -2281,7 +2281,7 @@ fieldset:disabled a.btn {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(214, 52, 71, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(214, 52, 71, 0.5); }
   .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-    color: #D63447;
+    color: #1005db;
     background-color: transparent; }
   .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
   .show > .btn-outline-primary.dropdown-toggle {
