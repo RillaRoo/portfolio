@@ -23,7 +23,59 @@
 
   </head>
   <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+    <style>
+      /* Estilizando a barra de rolagem no Chrome, Edge e Safari */
+::-webkit-scrollbar {
+  width: 14px; /* Largura maior */
+}
 
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Cor de fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2265a9; /* Cor principal do site */
+  border-radius: 7px;
+  border: 3px solid #1a1a1a; /* Borda para separar da área de fundo */
+  transition: background 0.3s ease;
+}
+
+/* Quando passa o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #184d80; /* Cor mais escura no hover */
+}
+
+/* Quando clica na barra */
+::-webkit-scrollbar-thumb:active {
+  background: #000000 !important; /* Preto ao clicar */
+}
+
+/* Firefox */
+* {
+  scrollbar-color: #2265a9 #1a1a1a;
+}
+
+/* Ajuste para Firefox no hover */
+*::-moz-scrollbar-thumb:hover {
+  background: #184d80;
+}
+
+/* Ajuste para Firefox ao clicar */
+*::-moz-scrollbar-thumb:active {
+  background: #000000;
+}
+
+.site-nav-ul li a {
+  font-size: 18px !important; /* Aumente o valor conforme necessário */
+}
+
+.site-logo a {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+      </style>
+      
     <nav class="unslate_co--site-mobile-menu">
       <div class="close-wrap d-flex">
         <a href="#" class="d-flex ml-auto js-menu-toggle">
@@ -54,26 +106,15 @@
         <div class="container">
         
           <div class="row align-items-center justify-content-between text-left">
-            <div class="col-md-5 text-right">
-              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+            <div class="col-12 text-center"> 
+              <ul class="site-nav-ul js-clone-nav d-inline-block">
                 <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-                <li><a href="#about-section" class="nav-link">About</a></li>
+                <li><a href="#about-section" class="nav-link">Experience</a></li>
                 <li><a href="#skills-section" class="nav-link">Skills</a></li>
-              </ul>
-            </div>
-            <div class="site-logo pos-absolute">
-              <a href="index.html" class="unslate_co--site-logo">Home<span>.</span></a>
-            </div>
-            <div class="col-md-5 text-right text-lg-left">
-              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                <li><a href="#about-section" class="nav-link">About</a></li>
                 <li><a href="#hobbies-section" class="nav-link">Hobbies</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
               </ul>
-
-              <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
-                <li><a href="#" class="js-menu-toggle">Menu</a></li>
-              </ul>
-
             </div>
           </div>
         </div>
@@ -81,27 +122,24 @@
       </nav>
       <!-- END nav -->
 
-      <div class="cover-v1 jarallax" style="background-image: url('images/bruno_background2.png');" id="home-section">
+      <div class="cover-v1 jarallax" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('images/bruno_background2.png');" id="home-section">
         <div class="container">
           <div class="row align-items-center">
-              
             <div class="col-md-7 mx-auto text-center">
-              <h1 class="heading gsap-reveal-hero">Welcome</h1>
-              <h2 class="subheading gsap-reveal-hero">I’m Bruno Costa, <br> a Game Developer based In Porto, Portugal</h2>
+              <h1 class="heading gsap-reveal-hero">Bruno Costa</h1>
+              <h2 class="subheading gsap-reveal-hero">Game Designer</h2>
             </div>
-
           </div>
         </div>
-
-
+      
         <a href="#portfolio-section" class="mouse-wrap smoothscroll">
           <span class="mouse">
             <span class="scroll"></span>
           </span>
           <span class="mouse-label">Scroll</span>
         </a>
-
       </div>
+      
       <!-- END .cover-v1 -->
 
 
@@ -115,7 +153,7 @@
           <div class="portfolio-wrapper">
 
             <div class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter">
-              <h2 class="mr-auto heading-h2"><span class="gsap-reveal">Portfolio</span></h2>
+              <h1 class="mr-auto heading-h2"><span class="gsap-reveal"><b>Portfolio</b></span></h1>
 
               <!-- <a href="#" class="text-white js-filter d-inline-block d-lg-none">Filter</a>
               
@@ -133,7 +171,20 @@
 
             
             <div id="posts" class="row gutter-isotope-item">
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+              <div class="item web branding col-sm-6 col-md-6 col-lg-6 isotope-mb-2">
+                <a href="fff.html" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="0">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>Flat Fat Fartfest</h3>
+                        <p>Rage Game, Available on Steam</p>
+                      </div>
+                    </div>
+                    <img src="images/fff_logo.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item web branding col-sm-6 col-md-6 col-lg-6 isotope-mb-2">
                 <a href="bergolis.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
@@ -146,8 +197,9 @@
                   </a>
               </div>
 
+
               
-              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
+              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-6 isotope-mb-2 ">
                 <a href="dondrag.html" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="2">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
@@ -160,7 +212,7 @@
                   </a>
               </div>
 
-              <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+              <div class="item branding packaging col-sm-6 col-md-6 col-lg-6 isotope-mb-2">
                 <a href="monmontesk.html" class="portfolio-item isotope-item gsap-reveal-img ajax-load-page" data-id="3">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
@@ -173,7 +225,7 @@
                   </a>
               </div>
 
-              <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+              <div class="item web packaging col-sm-6 col-md-6 col-lg-6 isotope-mb-2">
                 <a href="cabrita.html" class="portfolio-item isotope-item gsap-reveal-img ajax-load-page" data-id="4">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
@@ -199,7 +251,7 @@
                   </a>
               </div> -->
 
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+              <div class="item web branding col-sm-6 col-md-6 col-lg-6 isotope-mb-2">
                 <a href="jackson.html" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="6">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
@@ -225,7 +277,7 @@
                   </a>
               </div> -->
 
-              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+              <div class="item web illustration col-sm-6 col-md-6 col-lg-6 isotope-mb-2">
                 <a href="pacetospace.html" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="7">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
@@ -265,15 +317,144 @@
           </div>
         </div>
       </div> -->
+      <br>
+      <br>
+      <br>
+      
+      <div class="unslate_co--section section-counter" id="work-experience-section">
+        <div class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter justify-content-center">
+            <h1 class="heading-h1"><span class="gsap-reveal"><b>Work Experience</b></span></h1>
+        </div>
+    
+        <div id="work-experience-posts" class="row gutter-isotope-item justify-content-center">
+            <div style="margin: 0 400px;">
+                <div class="col-12">
+                    <ul class="work-experience-list" style="list-style-type: none; padding-left: 0;">
+                        <li>
+                            <h3><b>Game Designer & Game Director</b> at <i>Linovt</i></h3>
+                            <p>Oct. 2023 - Feb. 2025 (1 year, 4 months)</p>                
+                        </li>
+                        <ul>
+                            <li><b><b>Game Designer</b></b></li>
+                            <ul>
+                                <li><strong>Mechanics Design:</strong> Developing and documenting game mechanics, difficulty balancing, and progression systems.</li>
+                                <li><strong>Level Design:</strong> Creating levels using tools like Unity and Unreal Engine, focusing on learning curves and player engagement.</li>
+                                <li><strong>Narrative and Context:</strong> Crafting compelling stories and building coherent universes that integrate narrative with gameplay.</li>
+                                <li><strong>Prototyping and Testing:</strong> Producing prototypes to validate concepts and adjusting designs based on player feedback.</li>
+                            </ul>
+                            <li><b><b>Game Director</b></b></li>
+                            <ul>
+                                <li><strong>Project Planning and Management:</strong> Defining scope, schedule, and resource allocation using agile methodologies like Scrum and Kanban.</li>
+                                <li><strong>Leadership:</strong> Coordinating programmers, artists, and designers to ensure clear communication and goal alignment.</li>
+                                <li><strong>Technical and Creative Decision-Making:</strong> Evaluating and selecting systems, tools, and design approaches based on project requirements.</li>
+                                <li><strong>Risk Management:</strong> Anticipating potential challenges and applying strategies to mitigate impacts on timelines.</li>
+                            </ul>            
+                        </ul>
+                        <br><br>
+                        <li>
+                            <h3><b>Nurse</b> at <i>SNS24</i></h3>
+                            <p>Nov. 2020 - Nov. 2023 (3 years)</p>
+                        </li>
+                        <p>As a nurse at SNS24, I provided remote healthcare support through a telehealth call center, assisting patients with symptom assessment, health education, and care recommendations. My responsibilities included triaging cases, offering guidance on appropriate care levels, and activating emergency protocols when necessary.</p>
+                        <p>Here I developed strong communication skills, critical thinking, and the ability to make quick, accurate decisions in high-pressure situations.</p>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
+<style>
+.work-experience-list {
+text-align: left;
+margin: 0 auto;
+display: inline-block;
+}
 
+.work-experience-list li {
+margin-bottom: 20px;
+}
+</style>
+<br>
+<br>
+<br>
+<div class="unslate_co--section section-counter" id="skills-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h1 class="heading-h1 text-center divider">
+        <span class="gsap-reveal"><b>Skills</b></span>
+      </h1>
+    </div>
+
+    <div class="row pt-5">
+      <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="counter-v1 text-center">
+          <span class="number-wrap"></span>
+          <span class="counter-label animated-text">Game Design</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="counter-v1 text-center">
+          <span class="number-wrap"></span>
+          <span class="counter-label animated-text">Level Design</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="counter-v1 text-center">
+          <span class="number-wrap"></span>
+          <span class="counter-label animated-text">Unity</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="counter-v1 text-center">
+          <span class="number-wrap"></span>
+          <span class="counter-label animated-text">Unreal Engine</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .animated-text {
+    font-weight: bold;
+    color: #2265a9;
+    animation: colorPulse 3s infinite alternate, colorShift 3s infinite alternate;
+    font-size: 1.6rem !important;
+  }
+  
+  @keyframes colorShift {
+    0% {
+      color: #fff;
+    }
+    100% {
+      color: #2265a9;
+    }
+  }
+  
+  @keyframes colorPulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+  </style>
+
+    <br>
+    <br>
+    <br>
       <div class="unslate_co--section" id="about-section">
         <div class="container">
           
           <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">About Me</span></h2>
+            <h1 class="heading-h1 text-center divider"><span class="gsap-reveal"><b>About Me</b></span></h1>
             <span class="gsap-reveal">
-            <img src="images/divider.png" alt="divider" width="76">
+            <!-- <img src="images/divider.png" alt="divider" width="76"> -->
             </span>
           </div>
           
@@ -286,69 +467,25 @@
             </div>
             <div class="col-lg-4 pr-lg-5">
               <h3 class="mb-4 heading-h3"><span class="gsap-reveal">Hey there!</span></h3>
-              <p class="lead gsap-reveal">I'm <span style="color: #2265a9; font-weight: bold;">Bruno Costa</span>, a 25-year-old game developer residing in Porto, Portugal.</p>
+              <p class="lead gsap-reveal">I'm <span style="color: #2265a9; font-weight: bold;">Bruno Costa</span>, a 26-year-old game designer residing in Porto, Portugal.</p>
               <p class="mb-4 gsap-reveal">My journey began in the realm of biology and care, leading me to earn a degree in <span style="color: #2265a9; font-weight: bold;">nursing</span>. While the field captivated me, my true calling drew me into the enchanting world of <span style="color: #2265a9; font-weight: bold;">video game development</span>.</p>
               <p class="mb-4 gsap-reveal">Embarking on a quest to turn my childhood fascination with gaming into a career, I took the leap and dove into the realms of <span style="color: #2265a9; font-weight: bold;">game design</span> and <span style="color: #2265a9; font-weight: bold;">programming</span> at Universidade Lusófona do Porto.</p>
-              <p class="gsap-reveal"><a href="cv/bruno_costa_resume.pdf" target="_blank" class="btn btn-outline-pill btn-custom-light">Watch my CV</a></p>
+              <p class="gsap-reveal"><a href="cv/bruno_costa_resume25.pdf" target="_blank" class="btn btn-outline-pill btn-custom-light">Read my CV</a></p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="unslate_co--section section-counter" id="skills-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Skills</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
-
-
-          <div class="row pt-5">
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  
-                </span>
-                <span class="counter-label" style= "color: #2265a9; font-weight: bold;"></style=>C#</span>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  
-                </span>
-                <span class="counter-label" style= "color: #2265a9; font-weight: bold;"></style=>Game Design</span>
-
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                </span>
-                <span class="counter-label" style= "color: #2265a9; font-weight: bold;"></style=>Unity</span>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                </span>
-                <span class="counter-label" style= "color: #2265a9; font-weight: bold;"></style=>GitHub</span>
-
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <br>
+      
 
       <!-- Hobbies -->
       <div class="unslate_co--section" id="hobbies-section">
         <div class="container">
           
           <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal"> Hobbies </span></h2>
+            <h1 class="heading-h1 text-center divider"><span class="gsap-reveal"> <b>Hobbies</b> </span></h1>
             <span class="gsap-reveal">
-            <img src="images/divider.png" alt="divider" width="76">
+            <!-- <img src="images/divider.png" alt="divider" width="76"> -->
             </span>
           </div>
           
@@ -361,74 +498,60 @@
             </div>
             <div class="col-lg-4 pr-lg-5">
               <h3 class="mb-4 heading-h3"><span class="gsap-reveal">The poetry of music</span></h3>
-              <p class="lead gsap-reveal">I spend a lot of my free time immersing myself in the world of video games, exploring new genres and aspects of game creation, especially music. I use tools like <span style="color: #2265a9; font-weight: bold;">FL Studio</span> and <span style="color: #2265a9; font-weight: bold;">new engines</span> to broaden my knowledge.</p>
-              <p class="mb-4 gsap-reveal">Writing is another passion of mine, focusing on creative themes such as <span style="color: #2265a9; font-weight: bold;">philosophy</span>, <span style="color: #2265a9; font-weight: bold;">psychology</span> and crafting <span style="color: #2265a9; font-weight: bold;">narratives</span> for video games, particularly those that delve into the human mind.</p>
-              <p class="mb-4 gsap-reveal">Aside from music, I'm also a member of a tuna named <span style="color: #2265a9; font-weight: bold;">Tuna de Santa Maria</span>, a musical group where many experiences and a lot of knowledge are shared. It's a place where I can grow and maintain the philosophies that have shaped me.</p>
+              <p class="mb-4 gsap-reveal">Writing is a big passion of mine, focusing on creative themes such as <span style="color: #2265a9; font-weight: bold;">philosophy</span>, <span style="color: #2265a9; font-weight: bold;">psychology</span> and crafting <span style="color: #2265a9; font-weight: bold;">narratives</span> for video games, particularly those that delve into the human mind.</p>
+              <p class="mb-4 gsap-reveal">I'm also a member of a tuna named <span style="color: #2265a9; font-weight: bold;">Tuna de Santa Maria</span>, a musical group where many experiences and a lot of knowledge are shared. It's a place where I can grow and maintain the philosophies that have shaped me.</p>
             </div>
           </div>
         </div>
       </div>
-
-      
-        </div>
-      </div>
-      <!-- END .counter -->
-
-      <!-- END testimonial -->
-      
-      <!-- END blog posts -->
-
-
+<br>
+<br>
+<br>
       <div class="unslate_co--section" id="contact-section">
         <div class="container">
           <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Get In Touch</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
+            <h1 class="heading-h1 text-center divider"><span class="gsap-reveal"><b>Get In Touch</b></span></h1>
+            <!-- <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span> -->
           </div>
 
 
           <div class="row justify-content-between">
             
-            <div class="col-md-6">
-              <form method="post" class="form-outline-style-v1" id="contactForm">
+            <!-- <div class="col-md-6">
+              <form method="post" action="send_email.php" class="form-outline-style-v1" id="contactForm">
                 <div class="form-group row mb-0">
-
                   <div class="col-lg-6 form-group gsap-reveal">
                     <label for="name">Name</label>
-                    <input name="name" type="text" class="form-control" id="name">
+                    <input name="name" type="text" class="form-control" id="name" required>
                   </div>
                   <div class="col-lg-6 form-group gsap-reveal">
                     <label for="email">Email</label>
-                    <input name="email" type="email" class="form-control" id="email">
+                    <input name="email" type="email" class="form-control" id="email" required>
                   </div>
                   <div class="col-lg-12 form-group gsap-reveal">
                     <label for="message">Write your message...</label>
-                    <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" required></textarea>
                   </div>
                 </div>
                 <div class="form-group row gsap-reveal">
-                    <div class="col-md-12 d-flex align-items-center">
-                      <input type="submit" class="btn btn-outline-pill btn-custom-light mr-3" value="Send Message">
-                      <span class="submitting"></span>
-                    </div>
+                  <div class="col-md-12 d-flex align-items-center">
+                    <input type="submit" class="btn btn-outline-pill btn-custom-light mr-3" value="Send Message">
+                    <span class="submitting"></span>
                   </div>
+                </div>
               </form>
               <div id="form-message-warning" class="mt-4"></div> 
-              <div id="form-message-success">
-                Your message was sent, thank you!
-              </div>
+              <div id="form-message-success">Your message was sent, thank you!</div>
+              
+              
 
-            </div>
+            </div> -->
 
             <div class="col-md-4">
               <div class="contact-info-v1">
                 <div class="gsap-reveal d-block">
                   <span class="d-block contact-info-label">Email</span>
                   <a class="contact-info-val">vitorbruno25@gmail.com</a>
-                </div>
-                <div class="gsap-reveal d-block">
-                  <span class="d-block contact-info-label">Phone</span>
-                  <a class="contact-info-val">+351 914 355 876</a>
                 </div>
                 <div class="gsap-reveal d-block">
                
@@ -439,7 +562,40 @@
           </div>
         </div>
       </div>
-      </div> <!-- END .unslate_co-site-inner -->
+      </div>
+
+        <div class="container">
+      
+          <div class="relative">
+            <div class="loader-portfolio-wrap">
+              <div class="loader-portfolio"></div>
+            </div>
+          </div>      
+        </div>
+        </div>
+      </div>
+      <!-- END .counter -->
+
+      <!-- END testimonial -->
+      
+      <!-- END blog posts -->
+
+
+      
+      <style>
+        /* Remove a barra de rolagem horizontal */
+        body {
+          overflow-x: hidden;
+          margin: 0;
+          padding: 0;
+        }
+        
+        /* Garante que nenhum elemento ultrapasse o limite da tela */
+        * {
+          box-sizing: border-box;
+          max-width: 100%;
+        }
+        </style>
 
       <footer class="unslate_co--footer unslate_co--section">
         <div class="container">
@@ -447,7 +603,6 @@
             <div class="col-md-7">
               
               <div class="footer-site-logo"><a href="#">Home<span style="color: #2265a9;">.</span></a></div>
-
 
               <ul class="footer-site-social">
                 <li><a href="https://www.linkedin.com/in/bruno-costa-a51645154/" target="_blank">LinkedIn</a></li>

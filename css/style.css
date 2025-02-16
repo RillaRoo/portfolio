@@ -127,7 +127,7 @@ a, a:hover {
 }
 
 .btn.btn-bg-white--hover:hover {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #000;
 }
 
@@ -721,6 +721,12 @@ a, a:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
 }
 
+.portfolio-item img {
+  width: 150% !important;
+  height: 250px;
+  object-fit: cover;
+}
+
 .cover-v1.overlay {
   position: relative;
 }
@@ -1131,7 +1137,7 @@ a, a:hover {
 }
 
 .unslate_co--section a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .heading-h2 {
@@ -2003,7 +2009,7 @@ span.error {
   }
 }
 
-.lines-wrap .lines-inner {
+/* .lines-wrap .lines-inner {
   position: absolute;
   width: 1140px;
   left: 50%;
@@ -2012,16 +2018,16 @@ span.error {
   height: 100%;
   border-left: 1px solid #222;
   border-right: 1px solid #222;
-}
+} */
 
-.lines-wrap .lines-inner .lines {
+/* .lines-wrap .lines-inner .lines {
   position: absolute;
   left: 33.333333%;
   right: 33.333333%;
   height: 100%;
   border-left: 1px solid #222;
   border-right: 1px solid #222;
-}
+} */
 
 .gsap-reveal {
   position: relative;
